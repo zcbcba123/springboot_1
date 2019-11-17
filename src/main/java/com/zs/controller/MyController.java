@@ -13,6 +13,7 @@ import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Map;
 
 //
 @Controller
@@ -39,6 +40,15 @@ public class MyController {
         System.out.println(postbody);
 
         return postbody+"过了服务器后";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/form_api",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
+    public String form_api(@RequestBody String body,String name,String type){
+        // 直接将json信息打印出来
+        System.out.println(type);
+
+        return type+"过了服务器后";
     }
 
     //还不行
