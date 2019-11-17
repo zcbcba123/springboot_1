@@ -41,6 +41,7 @@ public class MyController {
         return postbody+"过了服务器后";
     }
 
+    //还不行
     @ResponseBody
     @RequestMapping(value = "/post_sink",method = RequestMethod.POST,produces = "text/x-markdown;charset=UTF-8")
     public String post_sink(@RequestBody InputStream inputStream){
